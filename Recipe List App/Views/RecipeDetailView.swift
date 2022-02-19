@@ -23,10 +23,10 @@ struct RecipeDetailView: View {
                 {
                       Text("Ingredients").font(.headline).fontWeight(.heavy).foregroundColor(Color.red).multilineTextAlignment(.center).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                       
-                      ForEach(recipe.ingredients,id:\.self)
+                      ForEach(recipe.ingredients)
                       {
                             item in
-                            Text("->  "+item)
+                            Text("->  "+item.name)
                                   .fontWeight(.bold)
                                   .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing], 1.0/*@END_MENU_TOKEN@*/)
                       }
